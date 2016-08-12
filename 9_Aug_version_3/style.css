@@ -1,3 +1,13 @@
+.bill {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  display: none;
+}
+
 body {
   font-family: monospace;
 

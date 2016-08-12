@@ -1,4 +1,6 @@
 //FUNCTIONS TO SEE WHO THE FIRST PLAYER PICKS (I.E. DONALD OR HILLARY)
+
+
 var firstPlayer = false;
 console.log(firstPlayer);
 
@@ -6,6 +8,8 @@ console.log(firstPlayer);
     if ( !firstPlayer ) { //this means that if the variable is false
       firstPlayer = "Donald";
       console.log(firstPlayer);
+      // var audioTheme = document.querySelector(".hotline");
+      // audioTheme.play();
       return firstPlayer;
     } else {
       alert("YOU HAVE ALREADY PICKED A FIRST PLAYER");
@@ -25,9 +29,6 @@ console.log(firstPlayer);
     }
   };
   $("#hillary").on("click",hillaryClicked);
-
-
-
 
 
 //FUNCTION TO CHECK WHOSE TURN IT IS AND TO CHECK IF THE GAME HAS BEEN WON
@@ -101,11 +102,19 @@ var checkWin = function (player) {
           if (winCount === 1){
           alert("VICTORY for Donald!");
           } else if (winCount === 2){
-          alert("VICTORY for Hillary!");
+            $(".bill").css("position","absolute");
+            $(".bill").css("display","block");
+            $(".bill").css("top","200px");
+            $(".bill").css("left","400px");
+            $(".bill").css("z-index","5");
+            $(".bill").css("border-radius" ,"10px");
+            var videoTheme = document.querySelector(".instagram");
+            videoTheme.play();
         }
       }
   }
 }
+
 
 //WIN SCENARIO 2: MIDDLE ROW
   if ($("#cell-four").text()!== ""){
